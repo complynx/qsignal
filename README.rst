@@ -23,18 +23,24 @@ To emit it, just call your ``sig()``.
 Or emit it in asynchronous mode with the method `async`.
 
 Example:
+
 >>> from qsignal import Signal
+
 >>> # Creating signal
 >>> sig = Signal()
+
 >>> # Or
 >>> myobject.signal = Signal(emitter=myobject)
+
 >>> # Connecting to signals
 >>> sig.connect(callback)
 >>> myobject.signal.connect(sig)
 >>> myobject.signal.connect(otherobject.callback_method)
+
 >>> # Emitting
 >>> sig()
 >>> myobject.signal('argument(s)', optional=True)
+
 >>> # Emitting in asynchronous mode
 >>> sig.async()
 
